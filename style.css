@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 40px;
+  background-color: black;
+  background-image: url(https://media.istockphoto.com/id/498478219/zh/%E7%85%A7%E7%89%87/stars-at-night-sky.jpg?s=612x612&w=0&k=20&c=UYn4XOGHUIBooaD1XFbVO-SQ8Rm5eOeffdl-jRjVPIo=);
+}
+
+h1 {
+  font-family: 'Star Wars', sans-serif;
+  color: white;
+  text-align: center; 
+}
+
+hr {
+  width: 230px;
+  margin: 30px auto 8px auto;
+  border: 2.25px solid #6ac4f1;
+  box-shadow: 0 0 15px lightblue, inset 0 0 15px lightblue;
+}
+
+.container {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+ }
+
+.photo img {
+  height: 68vh;
+  width: 75px;
+  object-fit: cover;
+  margin: 7px;
+  filter: grayscale(100%)
+}
+
+.photo img:hover {
+  filter: grayscale(25%);
+}
+
+.zoom {
+  transition: transform .2s;
+}
+
+.zoom:hover {
+  transform: scale(1.15); 
+}
+
+@media screen and (max-width: 768px) {
+  .photo {
+    display: flex;
+    flex-direction: column;
+    /*flex: 1 0 46%;*/
+    justify-content: center;
+  }
+  .photo img {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .photo {
+    display: flex;
+    /*flex-direction: column;*/
+    /*flex: 1 0 96%;*/
+    justify-content: 
+      space-around;
+  }
+  .photo img {
+    width: 140px; 
+  }
+}
+
